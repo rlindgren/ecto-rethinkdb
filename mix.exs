@@ -16,8 +16,8 @@ defmodule EctoRethinkdb.Mixfile do
   # Dependencies list:
   def deps(:prod) do
     [
-      { :ecto, github: "elixir-lang/ecto" },
-      { :rethinkdb, github: "azukiapp/elixir-rethinkdb" }
+      { :ecto, "~> 2.0.0" },
+      { :rethinkdb, "~>0.4.0" }
     ]
   end
 
