@@ -1,5 +1,5 @@
 defmodule Ecto.Adapters.Rethinkdb.RqlBuilder do
-  use Rethinkdb
+  use RethinkDB
 
   alias Ecto.Query.Query
   alias Ecto.Query.QueryExpr
