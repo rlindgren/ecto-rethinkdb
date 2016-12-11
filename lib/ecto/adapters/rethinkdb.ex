@@ -11,6 +11,8 @@ defmodule Ecto.Adapters.Rethinkdb do
   alias Rethinkdb.Connection
   alias Ecto.Adapters.Rethinkdb.RqlBuilder
   alias Ecto.Query.Query
+  
+  import Record
 
   defmacro __using__(_opts) do
     quote do
@@ -36,7 +38,7 @@ defmodule Ecto.Adapters.Rethinkdb do
     :poolboy.stop(pool_name)
   end
 
-  def all(repo, query) do
+  def all(repo, Query[] = query) do
     rql = RqlBuilder.select(query)
     result = transaction(repo, rql)
   end
