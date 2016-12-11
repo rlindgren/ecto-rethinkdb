@@ -38,7 +38,7 @@ defmodule Ecto.Adapters.Rethinkdb do
     :poolboy.stop(pool_name)
   end
 
-  def all(repo, Query[] = query) do
+  def all(repo, query) do
     rql = RqlBuilder.select(query)
     result = transaction(repo, rql)
   end
