@@ -7,7 +7,7 @@ defmodule Ecto.Adapters.Rethinkdb do
 
   @behaviour Ecto.Adapter
 
-  alias Rethinkdb.Rql
+  alias RethinkDB.Rql
   alias Rethinkdb.Connection
   alias Ecto.Adapters.Rethinkdb.RqlBuilder
   alias Ecto.Query.Query
