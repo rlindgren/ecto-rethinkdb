@@ -8,7 +8,7 @@ defmodule Ecto.Adapters.Rethinkdb.RqlBuilder do
 
   def pp(value), do: IO.inspect(value)
 
-  def select(Query[] = query) do
+  def select(query) do
     models = create_names(query)
     { rql, used_names } = from(query.from, models)
 
