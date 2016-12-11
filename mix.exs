@@ -4,7 +4,7 @@ defmodule EctoRethinkdb.Mixfile do
   def project do
     [ app: :'ecto-rethinkdb',
       version: "0.0.1",
-      elixir: "~> 0.10.2",
+      elixir: "~> 1.3.4",
       deps: deps(Mix.env) ]
   end
 
